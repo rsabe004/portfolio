@@ -1,0 +1,109 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #E2E2E2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Nohemi', sans-serif;
+    color: #007B0C;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    position: relative;
+    height: calc(100vh - 100px);
+}
+
+.intro {
+    grid-column: 2 / span 6;
+    align-self: center;
+}
+
+h1 {
+    font-family: 'Nohemi', sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #007B0C;
+}
+
+.roles {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #007B0C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Nohemi', sans-serif;
+    cursor: pointer;
+}
+
+.star-asset {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #007B0C;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.cta {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    text-align: right;
+}
+
+.chevron {
+    width: 40px;
+    height: 40px;
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    transform: rotate(45deg);
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.chevron:hover {
+    transform: rotate(45deg) scale(1.2);
+}
