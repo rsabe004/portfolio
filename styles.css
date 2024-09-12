@@ -45,10 +45,12 @@ main {
     gap: 20px;
     position: relative;
     height: calc(100vh - 100px);
+    padding-bottom: 15vh;
+    box-sizing: border-box;
 }
 
 .intro {
-    grid-column: 2 / span 6;
+    grid-column: 3 / span 5;
     align-self: center;
 }
 
@@ -79,8 +81,8 @@ button {
 
 .star-asset {
     position: absolute;
-    left: 0;
-    top: 50%;
+    left: -3%;
+    top: 32%;
     width: 200px;
     height: 200px;
     background-color: #007B0C;
@@ -89,21 +91,47 @@ button {
 
 .cta {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
-    text-align: right;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.cta{
+    font-size: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.description { 
+    grid-column: 9/ span 6;
+    align-self: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+    padding-top: 15px;
 }
 
 .chevron {
-    width: 40px;
-    height: 40px;
-    border-right: 4px solid black;
-    border-bottom: 4px solid black;
+    width: 20px;
+    height: 20px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
     transform: rotate(45deg);
-    margin-left: auto;
+    margin: 0 auto;
     transition: transform 0.3s ease;
 }
 
 .chevron:hover {
     transform: rotate(45deg) scale(1.2);
 }
+
+@media (max-width: 768px) {
+    .intro, .description {
+      grid-column: 2 / span 10; /* Full width on smaller screens */
+    }
+    
+    .description {
+      margin-top: 20px; /* Add some space between intro and description on small screens */
+    }
+  }
