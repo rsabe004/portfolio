@@ -13,3 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animateStar();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const chevronLink = document.querySelector('.chevron-link');
+    
+    chevronLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const projectsSection = document.querySelector('#projects');
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
